@@ -1,1 +1,2 @@
 "# StrapiPunnapa_6509650559"  initgit add README.mdgit commit -m "first commit"git branch -M maingit remote add origin git@github.com:Punnapa6509650559/StrapiPunnapa_6509650559.gitgit push -u origin main
+"# Strapi6509650559"  initgit add README.mdgit commit -m "first commit"git branch -M maingit remote add origin git@github.com:Punnapa6509650559/Strapi6509650559.gitgit push -u origin main

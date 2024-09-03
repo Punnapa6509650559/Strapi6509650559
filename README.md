@@ -1,4 +1,3 @@
-1
 
 ## What is Strapi ?
 
@@ -135,35 +134,34 @@ https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
 
 config โดย set ค่าตาม code นี้
 
-    ```
-module.exports = {
-  apps: [
-    {
-      name: 'your-app-name', # Your project name
-      cwd: '/home/ubuntu/my-project', #	 Path to your project
-      script: 'npm', # หรือใช้ yarn ก็ได้ (แล้วแต่โปรเจกต์เรา)
-      args: 'start', 
-      env: {
-        APP_KEYS: 'your app keys', // ดูได้จากไฟล์ project .env 
-        API_TOKEN_SALT: 'your api token salt',
-        ADMIN_JWT_SECRET: 'your admin jwt secret', #สามารถ Genarate เองได้
-        JWT_SECRET: 'your jwt secret', #สามารถ Genarate เองได้
-        NODE_ENV: 'production',
-        DATABASE_HOST: 'your-unique-url.rds.amazonaws.com', 
-        DATABASE_PORT: '5432',
-        DATABASE_NAME: 'strapi', 
-        DATABASE_USERNAME: 'postgres',
-        DATABASE_PASSWORD: 'Password',
-        AWS_ACCESS_KEY_ID: 'aws-access-key-id',
-        AWS_ACCESS_SECRET: 'aws-access-secret', 
-        AWS_REGION: 'aws-region',
-        AWS_BUCKET_NAME: 'my-project-bucket-name',
-      },
-    },
-  ],
-};
+  
+    module.exports = {
+      apps: [
+        {
+          name: 'your-app-name', # Your project name
+          cwd: '/home/ubuntu/my-project', #	 Path to your project
+          script: 'npm', # หรือใช้ yarn ก็ได้ (แล้วแต่โปรเจกต์เรา)
+          args: 'start', 
+          env: {
+            APP_KEYS: 'your app keys', // ดูได้จากไฟล์ project .env 
+            API_TOKEN_SALT: 'your api token salt',
+            ADMIN_JWT_SECRET: 'your admin jwt secret', #สามารถ Genarate เองได้
+            JWT_SECRET: 'your jwt secret', #สามารถ Genarate เองได้
+            NODE_ENV: 'production',
+            DATABASE_HOST: 'your-unique-url.rds.amazonaws.com', 
+            DATABASE_PORT: '5432',
+            DATABASE_NAME: 'strapi', 
+            DATABASE_USERNAME: 'postgres',
+            DATABASE_PASSWORD: 'Password',
+            AWS_ACCESS_KEY_ID: 'aws-access-key-id',
+            AWS_ACCESS_SECRET: 'aws-access-secret', 
+            AWS_REGION: 'aws-region',
+            AWS_BUCKET_NAME: 'my-project-bucket-name',
+          },
+        },
+      ],
 
-```
+    };
 
 หลังจากนั้น start ด้วยคำสั่ง
 
@@ -173,7 +171,7 @@ module.exports = {
 
     pm2 startup systemd
 
-เมื่อรันคำสั่งดังกล่าวจะมีข้อความบน command ให้ copy 
+เมื่อรันคำสั่งดังกล่าวจะมีข้อความบน Command ให้ Copy 
 
 ตัวอย่าง
 
@@ -187,17 +185,11 @@ module.exports = {
 
     npm start
 
-หลังจากนั้นดูว่าเว็บที่เรา deploy รันได้ไหมโดยการใส่ IP address ของ EC2 : Port ที่เรา custom ไว้ (ในโปรเจกต์นี้คือ port range 1337)
+หลังจากนั้นดูว่าเว็บที่เรา deploy รันได้ไหมโดยการใส่ IP address ของ EC2 : Port ที่เรา custom ไว้ (ในโปรเจกต์นี้คือ Port Range 1337)
 
 ref : https://docs.strapi.io/dev-docs/deployment/amazon-aws
 
-https://copilot.cloud.microsoft/?auth=2 (Prompt : How to deployment Strapi Project to AWS)~~
-
-
-
-
-
-
+https://copilot.cloud.microsoft/?auth=2 (Prompt : How to deployment Strapi Project to AWS)
 
 
 
